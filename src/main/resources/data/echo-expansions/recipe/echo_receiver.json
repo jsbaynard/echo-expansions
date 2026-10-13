@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "PRP",
+    "RSR",
+    "PRP"
+  ],
+  "key": {
+    "P": "minecraft:polished_deepslate",
+    "R": "minecraft:redstone",
+    "S": "minecraft:echo_shard"
+  },
+  "result": {
+    "id": "echo-expansions:echo_receiver",
+    "count": 1
+  }
+}

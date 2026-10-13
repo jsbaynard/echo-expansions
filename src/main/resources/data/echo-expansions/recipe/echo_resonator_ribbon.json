@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_transmute",
+  "category": "equipment",
+  "input": "echo-expansions:echo_resonator",
+  "material": "minecraft:string",
+  "result": {
+    "id": "echo-expansions:echo_resonator",
+    "components": {
+      "echo-expansions:ribbon": {}
+    }
+  }
+}

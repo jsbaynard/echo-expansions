@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north,linked=false,powered=false": { "model": "echo-expansions:block/echo_transmitter_unlinked_unpowered" },
+    "facing=north,linked=false,powered=true":  { "model": "echo-expansions:block/echo_transmitter_unlinked_powered" },
+    "facing=north,linked=true,powered=false":  { "model": "echo-expansions:block/echo_transmitter_linked_unpowered" },
+    "facing=north,linked=true,powered=true":   { "model": "echo-expansions:block/echo_transmitter_linked_powered" },
+
+    "facing=east,linked=false,powered=false":  { "model": "echo-expansions:block/echo_transmitter_unlinked_unpowered", "y": 90 },
+    "facing=east,linked=false,powered=true":   { "model": "echo-expansions:block/echo_transmitter_unlinked_powered",   "y": 90 },
+    "facing=east,linked=true,powered=false":   { "model": "echo-expansions:block/echo_transmitter_linked_unpowered",   "y": 90 },
+    "facing=east,linked=true,powered=true":    { "model": "echo-expansions:block/echo_transmitter_linked_powered",     "y": 90 },
+
+    "facing=south,linked=false,powered=false": { "model": "echo-expansions:block/echo_transmitter_unlinked_unpowered", "y": 180 },
+    "facing=south,linked=false,powered=true":  { "model": "echo-expansions:block/echo_transmitter_unlinked_powered",   "y": 180 },
+    "facing=south,linked=true,powered=false":  { "model": "echo-expansions:block/echo_transmitter_linked_unpowered",   "y": 180 },
+    "facing=south,linked=true,powered=true":   { "model": "echo-expansions:block/echo_transmitter_linked_powered",     "y": 180 },
+
+    "facing=west,linked=false,powered=false":  { "model": "echo-expansions:block/echo_transmitter_unlinked_unpowered", "y": 270 },
+    "facing=west,linked=false,powered=true":   { "model": "echo-expansions:block/echo_transmitter_unlinked_powered",   "y": 270 },
+    "facing=west,linked=true,powered=false":   { "model": "echo-expansions:block/echo_transmitter_linked_unpowered",   "y": 270 },
+    "facing=west,linked=true,powered=true":    { "model": "echo-expansions:block/echo_transmitter_linked_powered",     "y": 270 }
+  }
+}

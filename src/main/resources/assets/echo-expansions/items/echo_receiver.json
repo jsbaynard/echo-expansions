@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "echo-expansions:block/echo_receiver"
+  }
+}

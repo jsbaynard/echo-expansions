@@ -1,0 +1,59 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:condition",
+        "property": "minecraft:has_component",
+        "component": "echo-expansions:receiver_live",
+        "on_true": {
+          "type": "minecraft:model",
+          "model": "echo-expansions:item/echo_resonator_shard_active"
+        },
+        "on_false": {
+          "type": "minecraft:condition",
+          "property": "minecraft:has_component",
+          "component": "echo-expansions:echo_receiver_link",
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "echo-expansions:item/echo_resonator_shard_linked"
+          },
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "echo-expansions:item/echo_resonator_shard_unlinked"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "property": "echo-expansions:resonator_glow",
+        "on_true": {
+          "type": "minecraft:model",
+          "model": "echo-expansions:item/echo_resonator_remote_powered"
+        },
+        "on_false": {
+          "type": "minecraft:model",
+          "model": "echo-expansions:item/echo_resonator_remote_unpowered"
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "property": "minecraft:has_component",
+        "component": "echo-expansions:ribbon",
+        "on_true": {
+          "type": "minecraft:model",
+          "model": "echo-expansions:item/echo_resonator_ribbon",
+          "tints": [
+            {
+              "type": "minecraft:dye",
+              "default": -1
+            }
+          ]
+        },
+        "on_false": {
+          "type": "minecraft:empty"
+        }
+      }
+    ]
+  }
+}

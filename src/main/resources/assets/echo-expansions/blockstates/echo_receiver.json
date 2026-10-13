@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "activated=false": {
+      "model": "echo-expansions:block/echo_receiver"
+    },
+    "activated=true": {
+      "model": "echo-expansions:block/echo_receiver_active"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "echo-expansions",
+	"version": "${version}",
+	"name": "Echo Expansions",
+	"description": "Echo transmitters, receivers, and the resonator that links them.",
+	"authors": [
+		"gizmonster"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/echo-expansions/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"monster.giz.EchoExpansions"
+		],
+		"client": [
+			"monster.giz.client.EchoExpansionsClient"
+		],
+		"fabric-datagen": [
+			"monster.giz.client.EchoExpansionsDataGenerator"
+		]
+	},
+	"mixins": [
+		"echo-expansions.mixins.json",
+		{
+			"config": "echo-expansions.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

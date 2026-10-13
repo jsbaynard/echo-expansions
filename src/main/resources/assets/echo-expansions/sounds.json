@@ -1,0 +1,14 @@
+{
+  "echo_resonator_button": {
+    "subtitle": "sounds.echo-expansions.echo_resonator_button",
+    "sounds": [
+      "echo-expansions:echo_resonator_button"
+    ]
+  },
+  "echo_resonance": {
+    "subtitle": "sounds.echo-expansions.echo_resonance",
+    "sounds": [
+      "minecraft:block/amethyst/resonate2"
+    ]
+  }
+}

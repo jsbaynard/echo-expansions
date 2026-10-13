@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " E ",
+    "RTR",
+    "SSS"
+  ],
+  "key": {
+    "E": "minecraft:echo_shard",
+    "R": "minecraft:redstone",
+    "S": "minecraft:stone",
+    "T": "minecraft:redstone_torch"
+  },
+  "result": {
+    "id": "echo-expansions:echo_transmitter",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "block.echo-expansions.echo_receiver": "Echo Receiver",
+  "block.echo-expansions.echo_transmitter": "Echo Transmitter",
+
+  "item.echo-expansions.echo_resonator": "Echo Resonator",
+
+  "gamerule.echo-expansions.echo_entanglement_range": "Echo entanglement range",
+  "gamerule.echo-expansions.echo_resonator_cooldown": "Echo resonator cooldown",
+  "gamerule.echo-expansions.echo_receiver_relocation": "Echo receiver relocation",
+
+  "sounds.echo-expansions.echo_resonator_button": "Resonator button clicks",
+  "sounds.echo-expansions.echo_resonance": "Echo crystal resonates"
+}
