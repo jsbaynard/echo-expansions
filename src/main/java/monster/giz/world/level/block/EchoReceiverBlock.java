@@ -47,12 +47,16 @@ public class EchoReceiverBlock extends BaseEntityBlock {
 
     @Override
     protected int getSignal(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return state.getValue(ACTIVATED) ? 15 : 0;
+        return outputOf(level, pos);
     }
 
     @Override
     protected int getDirectSignal(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return state.getValue(ACTIVATED) ? 15 : 0;
+        return outputOf(level, pos);
+    }
+
+    private static int outputOf(BlockGetter level, BlockPos pos) {
+        return level.getBlockEntity(pos) instanceof EchoReceiverBlockEntity receiver ? receiver.getPower() : 0;
     }
 
     @Override

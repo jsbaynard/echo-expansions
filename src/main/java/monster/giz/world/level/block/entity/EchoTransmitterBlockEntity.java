@@ -66,7 +66,7 @@ public class EchoTransmitterBlockEntity extends BlockEntity {
 
         EchoReceiverBlockEntity receiver = EchoReceiverBlockEntity.get(level, targetPos);
         if (receiver != null) {
-            receiver.pokeSustained();
+            receiver.pokeSustained(EchoTransmitterBlock.inputSignal(level, pos, state));
         }
     }
 

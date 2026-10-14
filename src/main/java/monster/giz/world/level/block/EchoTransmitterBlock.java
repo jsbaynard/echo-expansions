@@ -104,9 +104,14 @@ public class EchoTransmitterBlock extends BaseEntityBlock {
         updatePoweredState(level, pos, state);
     }
 
-    private void updatePoweredState(Level level, BlockPos pos, BlockState state) {
+    // The redstone level reaching the back of the transmitter, which is what it passes on
+    public static int inputSignal(Level level, BlockPos pos, BlockState state) {
         Direction back = state.getValue(FACING).getOpposite();
-        boolean shouldBePowered = level.getSignal(pos.relative(back), back) > 0;
+        return level.getSignal(pos.relative(back), back);
+    }
+
+    private void updatePoweredState(Level level, BlockPos pos, BlockState state) {
+        boolean shouldBePowered = inputSignal(level, pos, state) > 0;
         if (shouldBePowered != state.getValue(POWERED)) {
             level.setBlock(pos, state.setValue(POWERED, shouldBePowered), Block.UPDATE_ALL);
         }

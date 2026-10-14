@@ -16,7 +16,7 @@ import static net.minecraft.core.registries.BuiltInRegistries.GAME_RULE;
 public class EEGamerules {
 
     public static final GameRule<Integer> ECHO_ENTANGLEMENT_RANGE =
-            registerInteger("echo_entanglement_range", GameRuleCategory.MISC, 32, 1, 256);
+            registerInteger("echo_entanglement_range", GameRuleCategory.MISC, 64, 1, 256);
 
     public static final GameRule<Integer> ECHO_RESONATOR_COOLDOWN =
             registerInteger("echo_resonator_cooldown", GameRuleCategory.MISC, 30, 1, 1200);
