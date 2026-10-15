@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "monster.giz.client.mixin",
+  "package": "com.jozsmo.client.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
     "ConditionalItemModelPropertiesMixin"

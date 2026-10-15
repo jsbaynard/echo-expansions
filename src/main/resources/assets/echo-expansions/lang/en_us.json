@@ -4,6 +4,8 @@
 
   "item.echo-expansions.echo_resonator": "Echo Resonator",
 
+  "tooltip.echo-expansions.entangled": "Entangled",
+
   "gamerule.echo-expansions.echo_entanglement_range": "Echo entanglement range",
   "gamerule.echo-expansions.echo_resonator_cooldown": "Echo resonator cooldown",
   "gamerule.echo-expansions.echo_receiver_relocation": "Echo receiver relocation",

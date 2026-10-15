@@ -8,7 +8,14 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "echo-expansions:echo_receiver"
+          "name": "echo-expansions:echo_receiver",
+          "modifier": {
+            "type": "minecraft:copy_components",
+            "source": "block_entity",
+            "include": [
+              "echo-expansions:receiver_identity"
+            ]
+          }
         }
       ],
       "rolls": 1

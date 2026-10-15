@@ -1,0 +1,9 @@
+{
+  "parent": "echo-expansions:block/new/echo_transmitter_template",
+  "textures": {
+    "top": "echo-expansions:block/new/echo_transmitter_off",
+    "torch_state": "echo-expansions:block/new/echo_torch_on",
+    "torch_link": "echo-expansions:block/new/echo_torch_on",
+    "torch_redstone": "block/redstone_torch_off"
+  }
+}

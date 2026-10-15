@@ -5,28 +5,27 @@
 	"name": "Echo Expansions",
 	"description": "Echo transmitters, receivers, and the resonator that links them.",
 	"authors": [
-		"gizmonster"
+		"jozsmo"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/jsbaynard/echo-expansions"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/echo-expansions/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"monster.giz.EchoExpansions"
+			"com.jozsmo.EchoExpansions"
 		],
 		"client": [
-			"monster.giz.client.EchoExpansionsClient"
+			"com.jozsmo.client.EchoExpansionsClient"
 		],
 		"fabric-datagen": [
-			"monster.giz.client.EchoExpansionsDataGenerator"
+			"com.jozsmo.client.EchoExpansionsDataGenerator"
 		]
 	},
 	"mixins": [
-		"echo-expansions.mixins.json",
 		{
 			"config": "echo-expansions.client.mixins.json",
 			"environment": "client"

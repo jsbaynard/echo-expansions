@@ -2,14 +2,23 @@
   "model": {
     "type": "minecraft:condition",
     "property": "minecraft:has_component",
-    "component": "echo-expansions:echo_receiver_link",
+    "component": "echo-expansions:receiver_in_range",
     "on_true": {
       "type": "minecraft:model",
-      "model": "echo-expansions:item/echo_transmitter_linked"
+      "model": "echo-expansions:item/echo_transmitter_ready"
     },
     "on_false": {
-      "type": "minecraft:model",
-      "model": "echo-expansions:item/echo_transmitter"
+      "type": "minecraft:condition",
+      "property": "minecraft:has_component",
+      "component": "echo-expansions:echo_receiver_link",
+      "on_true": {
+        "type": "minecraft:model",
+        "model": "echo-expansions:item/echo_transmitter_far"
+      },
+      "on_false": {
+        "type": "minecraft:model",
+        "model": "echo-expansions:item/echo_transmitter"
+      }
     }
   }
 }

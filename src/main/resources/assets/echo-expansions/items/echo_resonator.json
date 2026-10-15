@@ -13,14 +13,23 @@
         "on_false": {
           "type": "minecraft:condition",
           "property": "minecraft:has_component",
-          "component": "echo-expansions:echo_receiver_link",
+          "component": "echo-expansions:receiver_in_range",
           "on_true": {
             "type": "minecraft:model",
-            "model": "echo-expansions:item/echo_resonator_shard_linked"
+            "model": "echo-expansions:item/echo_resonator_shard_ready"
           },
           "on_false": {
-            "type": "minecraft:model",
-            "model": "echo-expansions:item/echo_resonator_shard_unlinked"
+            "type": "minecraft:condition",
+            "property": "minecraft:has_component",
+            "component": "echo-expansions:echo_receiver_link",
+            "on_true": {
+              "type": "minecraft:model",
+              "model": "echo-expansions:item/echo_resonator_shard_far"
+            },
+            "on_false": {
+              "type": "minecraft:model",
+              "model": "echo-expansions:item/echo_resonator_shard_unlinked"
+            }
           }
         }
       },
