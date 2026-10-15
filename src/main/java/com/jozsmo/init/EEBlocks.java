@@ -2,6 +2,7 @@ package com.jozsmo.init;
 
 import com.jozsmo.EchoExpansions;
 import com.jozsmo.world.level.block.EchoReceiverBlock;
+import com.jozsmo.world.item.EchoReceiverItem;
 import com.jozsmo.world.item.EchoTransmitterItem;
 import com.jozsmo.world.level.block.EchoTransmitterBlock;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
@@ -28,7 +29,7 @@ public class EEBlocks {
             "echo_receiver",
             EchoReceiverBlock::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK).lightLevel(state -> state.getValue(EchoReceiverBlock.ACTIVATED) ? 8 : 0),
-            BlockItem::new
+            EchoReceiverItem::new
     );
 
     public static final Block ECHO_TRANSMITTER = register(

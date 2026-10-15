@@ -5,6 +5,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.netty.buffer.ByteBuf;
 import com.jozsmo.init.EEBlocks;
 import com.jozsmo.init.EEGamerules;
+import com.jozsmo.world.item.EchoWaveform;
 import com.jozsmo.world.level.block.entity.EchoReceiverBlockEntity;
 import com.jozsmo.world.level.saveddata.EchoReceiverIndex;
 import net.minecraft.core.BlockPos;
@@ -21,6 +22,7 @@ import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.UUID;
 
 // Holds who the receiver is, not where it is. The position lives in EchoReceiverIndex.
@@ -40,6 +42,13 @@ public record EchoReceiverLinkComponent(Optional<UUID> receiver) {
     public static final Component ENTANGLED_TOOLTIP = Component
             .translatable("tooltip.echo-expansions.entangled")
             .withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC);
+
+    // The lines a linked carrier adds to its tooltip: that it is entangled, and with which
+    // receiver, as a trace rather than an id
+    public void appendTooltip(Consumer<Component> adder) {
+        adder.accept(ENTANGLED_TOOLTIP);
+        receiver.ifPresent(id -> adder.accept(EchoWaveform.of(id)));
+    }
 
     public static EchoReceiverLinkComponent of(UUID receiver) {
         return new EchoReceiverLinkComponent(Optional.of(receiver));

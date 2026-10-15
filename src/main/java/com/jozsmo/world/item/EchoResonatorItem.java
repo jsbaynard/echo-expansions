@@ -67,8 +67,9 @@ public class EchoResonatorItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> adder, TooltipFlag flag) {
         super.appendHoverText(stack, context, display, adder, flag);
-        if (stack.has(EEDataComponentTypes.ECHO_RECEIVER_LINK)) {
-            adder.accept(EchoReceiverLinkComponent.ENTANGLED_TOOLTIP);
+        EchoReceiverLinkComponent link = stack.get(EEDataComponentTypes.ECHO_RECEIVER_LINK);
+        if (link != null) {
+            link.appendTooltip(adder);
         }
     }
 
